@@ -10,21 +10,19 @@ class FamousPerson extends Component {
     }
 
     onNameChange = (event) => {
-        console.log(event.target.value);
-        // Let's change state, which triggers render()
         this.setState({
-            // event.target is the input field
             name: event.target.value
         });
     }
 
     onRoleChange = (event) => {
-        console.log(event.target.value);
-        // Let's change state, which triggers render()
         this.setState({
-            // event.target is the input field
             role: event.target.value
         });
+    }
+
+    submit = (event) => {
+        console.log(`name:${this.state.name}, role:${this.state.role}`);
     }
 
     render() {
@@ -33,6 +31,7 @@ class FamousPerson extends Component {
                 <h2>FamousPerson:</h2>
                 <input onChange={this.onNameChange} placeholder="name" />
                 <input onChange={this.onRoleChange} placeholder="role" />
+                <button onClick={this.submit}>Submit</button>
                 <p>{this.state.name} is famous for "{this.state.role}"</p>
             </div>
         );
