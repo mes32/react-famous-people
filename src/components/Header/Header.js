@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return (
             <div>
-                <header>
+                <header className="famousPersonHeader">
                     React Famous People
                 </header>
             </div>
