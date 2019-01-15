@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
+import Person from '../../classes/Person';
 
 class FamousPerson extends Component {
     constructor() {
         super();
-        this.state = {
-            name: '',
-            role: '',
-        };
+        this.state = new Person();
     }
 
     onNameChange = (event) => {
