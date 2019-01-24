@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import FamousPerson from './components/FamousPerson/FamousPerson';
+// import FamousPersonList from './components/FamousPersonList/FamousPersonList';
 
 class App extends Component {
   render() {

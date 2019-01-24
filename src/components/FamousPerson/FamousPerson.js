@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
-import Person from '../../classes/Person';
 
 class FamousPerson extends Component {
     constructor() {
         super();
-        this.state = new Person();
+        this.state = {
+            person: {
+                name: '',
+                role: '',
+            }
+        }
     }
 
     onNameChange = (event) => {
         this.setState({
-            name: event.target.value
+            person: {
+                ...this.state.person,
+                name: event.target.value            }
         });
     }
 
     onRoleChange = (event) => {
         this.setState({
-            role: event.target.value
+            person: {
+                ...this.state.person,
+                role: event.target.value
+            }
         });
     }
 
@@ -30,7 +39,7 @@ class FamousPerson extends Component {
                 <input onChange={this.onNameChange} placeholder="name" />
                 <input onChange={this.onRoleChange} placeholder="role" />
                 <button onClick={this.submit}>Submit</button>
-                <p>{this.state.name} is famous for "{this.state.role}"</p>
+                <p>{this.state.person.name} is famous for "{this.state.person.role}"</p>
             </div>
         );
     }
