@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import './App.css';
+import AboutPage from './components/AboutPage/AboutPage';
 import Header from './components/Header/Header';
 import FamousPerson from './components/FamousPerson/FamousPerson';
 
@@ -21,7 +22,7 @@ class App extends Component {
               </li>
             </ul>
             <Route exact path="/" component={FamousPerson} />
-            {/* <Route exact path="/about" component={AboutPage} /> */}
+            <Route exact path="/about" component={AboutPage} />
           </div>
         </Router>
       </div> 
