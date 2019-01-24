@@ -17,6 +17,7 @@ class FamousPerson extends Component {
                 ...this.state.person,
                 name: event.target.value            }
         });
+        console.log(this.state);
     }
 
     onRoleChange = (event) => {
@@ -26,10 +27,11 @@ class FamousPerson extends Component {
                 role: event.target.value
             }
         });
+        console.log(this.state);
     }
 
     submit = (event) => {
-        console.log(`name:${this.state.name}, role:${this.state.role}`);
+        console.log(`name:${this.state.person.name}, role:${this.state.person.role}`);
     }
 
     render() {
